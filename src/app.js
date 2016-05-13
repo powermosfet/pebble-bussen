@@ -9,7 +9,8 @@ var ajax = require('ajax');
 var moment = require('moment');
 
 var config = require('config.js');
-// var Vector2 = require('vector2');
+
+moment.locale('nb');
 
 var loadingScreen = new UI.Card({
   backgroundColor: '#658D2E',
@@ -57,7 +58,7 @@ main.on('select', function(e) {
       var departures = data.map(function(d){
         return { 
           title: d.published_line_name + ' ' + d.destination_display, 
-          subtitle: moment.duration(moment() - (d.expected_departure_time || d.aimed_departure_time)).humanize(true) + (d.expected_departure_time? '' : ' (?)'),
+          subtitle: moment.duration(moment((d.expected_departure_time || d.aimed_departure_time)+"00:00") - moment()).humanize(true) + (d.expected_departure_time? '' : '?'),
         };
       });
       var depList = new UI.Menu({
