@@ -4,7 +4,7 @@
         "location"
     ],
     "companyName": "herrasbe@gmail.com",
-    "longName": "Bussen",
+    "longName": "Pebble Kolumbus sanntid",
     "projectType": "pebblejs",
     "resources": {
         "media": [
@@ -28,11 +28,16 @@
                 "file": "fonts/UbuntuMono-Regular.ttf",
                 "name": "MONO_FONT_14",
                 "type": "font"
+            },
+            {
+                "file": "images/k_logo_28.png",
+                "name": "IMAGES_K_LOGO_28_PNG",
+                "type": "bitmap"
             }
         ]
     },
     "sdkVersion": "3",
-    "shortName": "Bussen",
+    "shortName": "Pebble sanntid",
     "targetPlatforms": [
         "aplite",
         "basalt"

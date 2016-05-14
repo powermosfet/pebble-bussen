@@ -7,24 +7,18 @@
 var UI = require('ui');
 var ajax = require('ajax');
 var moment = require('moment');
-
-var config = require('config.js');
-
 moment.locale('nb');
 
-var loadingScreen = new UI.Card({
-  backgroundColor: '#658D2E',
-  title: "Laster...",
-  subtitle: "henter lokasjon",
-});
+var config = require('config.js');
+var loadingScreen = require('loadingScreen');
+
+loadingScreen.showMessage('Finner posisjon');
 
 var main = new UI.Menu({
-  backgroundColor: '#658D2E',
-  highlightBackgroundColor: '#C2D100',
+  backgroundColor: config.backgroundColor,
+  highlightBackgroundColor: config.highlightBackgroundColor,
   highlightTextColor: 'black',
 });
-
-loadingScreen.show();
 
 navigator.geolocation.getCurrentPosition(function(loc) {
   var coords = "" + loc.coords.latitude + "," + loc.coords.longitude;
