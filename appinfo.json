@@ -10,7 +10,6 @@
         "media": [
             {
                 "file": "images/menu_icon.png",
-                "menuIcon": true,
                 "name": "IMAGE_MENU_ICON",
                 "type": "bitmap"
             },
@@ -31,6 +30,7 @@
             },
             {
                 "file": "images/k_logo_28.png",
+                "menuIcon": true,
                 "name": "IMAGES_K_LOGO_28_PNG",
                 "type": "bitmap"
             }
@@ -40,11 +40,12 @@
     "shortName": "Pebble sanntid",
     "targetPlatforms": [
         "aplite",
-        "basalt"
+        "basalt",
+        "chalk"
     ],
     "uuid": "68c5d88a-486a-44c2-adb0-b54272389d52",
     "versionCode": 1,
-    "versionLabel": "1.0",
+    "versionLabel": "0.3",
     "watchapp": {
         "hiddenApp": false,
         "watchface": false
