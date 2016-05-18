@@ -13,7 +13,7 @@ var departureListScreen = new UI.Menu({
 
 function departureMapper(departure) {
   return { 
-    title: departure.published_line_name + ' ' + departure.destination_display, 
+    title: departure.published_line_name + ' ' + (departure.destination_display || '-'), 
     subtitle: moment.duration(moment((departure.expected_departure_time || departure.aimed_departure_time)+"00:00") - moment()).humanize(true) + (departure.expected_departure_time? '' : '?'),
   };
 }

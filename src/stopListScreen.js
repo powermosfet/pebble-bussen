@@ -1,6 +1,7 @@
 var UI = require('ui');
 var config = require('config.js');
 var loadingScreen = require('loadingScreen');
+var handleStopClick = require('handleStopClick');
 
 function stopMapper(stop) {
   return { 
@@ -21,5 +22,7 @@ stopListScreen.showStops = function(stops) {
   stopListScreen.show();
   loadingScreen.hide();
 };
+
+stopListScreen.on('select', handleStopClick);
 
 module.exports = stopListScreen;
